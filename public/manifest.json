@@ -8,19 +8,15 @@
     "32": "icons/Coffee32.png",
     "48": "icons/Coffee48.png",
     "128": "icons/Coffee128.png"
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "https://www.facebook.com/*",
-        "https://www.netflix.com/*"
-      ],
-      "css": [
-        "css/style.css"
-      ]
-    }
+  }, 
+  "permissions": [
+    "activeTab"
   ],
-  "web_accessible_resources": [
-    "css/style.css"
-  ]
+  "optional_host_permissions":[
+    "https://*/*",
+    "http://*/*"
+  ],
+  "action": {
+    "default_popup": "index.html"
+  }
 }
